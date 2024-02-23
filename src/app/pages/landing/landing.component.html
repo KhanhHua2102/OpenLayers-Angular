@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">
+    Welcome to my solution for Millcrest Fullstack Developer Challenge
+  </h1>
+  <p class="text-lg mb-4">
+    I'm Henry Hua, graduated from UWA computer science and data science
+    bachelor. Feel free to have a look through my Github and Linkedin profile
+    down below.
+  </p>
+  <ul class="list-disc pl-4 mb-4">
+    <li>
+      For the challenge, I have used Angular as the front-end framework with Nx
+      as a build system. The project aims to visualize Openlayers map with data
+      from Vegetation DataWA and Soil and Landscape Grid of Australia.
+    </li>
+    <li>
+      Vegetation DataWA is a dataset containing the vegetation type of Western
+      Australia in a GeoJson format. Soil and Landscape Grid of Australia is a
+      dataset containing the soil type of Australia in a Cloud GeoTiff format.
+    </li>
+    <li>
+      Difficulties I have encountered during the challenge:
+      <ul class="list-disc pl-4">
+        <li>
+          The GeoJson format file from DataWA is too large to be read by
+          HttpClient in Angular. I have tried to split the file into smaller
+          files, but eventually, nodejs can not handle that large file.
+        </li>
+        <li>
+          The COG format file from Soil and Landscape Grid of Australia is not
+          supported by Openlayers, so I have to use a library to convert the
+          file to a format that Openlayers can read.
+        </li>
+        <li>
+          The GeoJson file is too large to be read directly as well, so my
+          intention was to split the API call into smaller chunks and then merge
+          them together. However, the API call is blocked by CORS policy, so I
+          need to use a proxy server to bypass the CORS policy. I tried to set
+          up a proxy server using proxy.conf.js, but it is not working as
+          expected.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<app-footer></app-footer>
