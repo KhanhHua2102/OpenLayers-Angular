@@ -11,7 +11,7 @@ import { useGeographic } from 'ol/proj';
 import { Map, Map as OpenMap, View } from 'ol';
 import OSM from 'ol/source/OSM.js';
 import TileLayer from 'ol/layer/WebGLTile.js';
-import { GeoTIFFService } from 'src/app/services/loadGeoTiff.service';
+import { GeoTIFFService } from '../../services/loadGeoTiff.service';
 
 @Component({
   selector: 'SLGA-map',

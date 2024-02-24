@@ -17,7 +17,7 @@ import GeoJSON from 'ol/format/GeoJSON';
 import VectorLayer from 'ol/layer/Vector';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style.js';
 
-import { GeoJsonService } from 'src/app/services/loadGeoJson.service';
+import { GeoJsonService } from '../../services/loadGeoJson.service';
 
 @Component({
   selector: 'vegetation-map',
